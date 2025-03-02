@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News || Urban Ranch Retreat</title>
+    <link rel="icon" type="image/png" href="logo.webp">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .blog-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .blog-post {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .blog-post:hover {
+            transform: scale(1.02);
+        }
+        .blog-title {
+            font-size: 24px;
+            color: #3cff00;
+        }
+        .blog-meta {
+            font-size: 14px;
+            color: gray;
+        }
+        .blog-content {
+            margin-top: 10px;
+            color: black;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"><img style="border-radius: 50%;" src="logo.webp" alt="Ranch Logo"></a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="conferencing.html">Conferencing</a></li>
+              <li><a href="accommodation.html">Accommodation</a></li>
+              <li><a href="leisure.html">Leisure</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="#book" class="cta-button">Book Now</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <div class="blog-container">
+        <h2>Latest News & Updates</h2>
+        <div class="blog-post">
+            <h3 class="blog-title">Exciting New Activities at Urban Ranch</h3>
+            <p class="blog-meta">Posted on February 26, 2025 | By Admin</p>
+            <p class="blog-content">Discover our newly introduced activities, including outdoor yoga and bonfire nights to make your stay even more memorable.</p>
+        </div>
+        <div class="blog-post">
+            <h3 class="blog-title">Special Discount for Early Bookings</h3>
+            <p class="blog-meta">Posted on February 20, 2025 | By Admin</p>
+            <p class="blog-content">Book your accommodation or event space in advance and enjoy a special discount. Limited time offer!</p>
+        </div>
+    </div>
+    
+    <footer class="animate-on-scroll">
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#conferencing">Conferencing</a></li>
+                    <li><a href="#accommodation">Accommodation</a></li>
+                    <li><a href="#leisure">Leisure</a></li>
+                    <li><a href="feedback.html">Feedback & Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2025 Urban Ranch Retreat. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

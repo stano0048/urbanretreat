@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leisure Activities || Urban Ranch Retreat</title>
+    <link rel="icon" type="image/png" href="logo.webp">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .activity {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInScale 1s ease-in-out forwards;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        body {
+    background-image: url('background2.webp');
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+    </style>
+</head>
+<body>
+    <header class="fade-in">
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"><img style="border-radius: 50%;" src="logo.webp" alt="Ranch Logo"></a>
+          </div>
+          <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="conferencing.html">Conferencing</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="leisure.html">Leisure</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#book" class="cta-button">Book Now</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <div class="container">
+        <h1>Leisure Activities</h1>
+        <p>Enjoy a variety of relaxing and adventurous activities at Urban Ranch Retreat.</p>
+        <div class="activities">
+            <div class="activity" style="animation-delay: 0.5s;">
+                <div class="slideshow" id="swimming-pool">
+                    <img src="pool1.jpg" class="active" alt="Swimming Pool">
+                    <img src="pool2.webp" alt="Swimming Pool">
+                    <img src="pool3.jpg" alt="Swimming Pool">
+                </div>
+                <h2>Swimming Pool</h2>
+                <p>Dive into relaxation with our crystal-clear swimming pool.</p>
+            </div>
+            <div class="activity" style="animation-delay: 1s;">
+                <div class="slideshow" id="nature-trails">
+                    <img src="nature1.jpg" class="active" alt="Nature Trails">
+                    <img src="nature2.webp" alt="Nature Trails">
+                    <img src="nature3.jpeg" alt="Nature Trails">
+                </div>
+                <h2>Nature Trails</h2>
+                <p>Explore scenic trails and reconnect with nature.</p>
+            </div>
+            <div class="activity" style="animation-delay: 1.5s;">
+                <div class="slideshow" id="horseback-riding">
+                    <img src="horseback1.jpg" class="active" alt="Horseback Riding">
+                    <img src="horseback2.jpg" alt="Horseback Riding">
+                    <img src="horseback3.jpg" alt="Horseback Riding">
+                </div>
+                <h2>Horseback Riding</h2>
+                <p>Enjoy a fun and exciting horseback riding experience.</p>
+            </div>
+            <div class="activity" style="animation-delay: 2s;">
+                <div class="slideshow" id="spa-wellness">
+                    <img src="spa1.jpg" class="active" alt="Spa and Wellness">
+                    <img src="spa2.jpg" alt="Spa and Wellness">
+                    <img src="spa3.png" alt="Spa and Wellness">
+                </div>
+                <h2>Spa and Wellness Center</h2>
+                <p>Relax and rejuvenate with our exclusive spa treatments.</p>
+            </div>
+            <div class="activity" style="animation-delay: 2.5s;">
+                <div class="slideshow" id="yoga">
+                    <img src="yoga1.jpg" class="active" alt="Outdoor Yoga">
+                    <img src="yoga2.jpeg" alt="Outdoor Yoga">
+                    <img src="yoga3.webp" alt="Outdoor Yoga">
+                </div>
+                <h2>Outdoor Yoga</h2>
+                <p>Find peace and balance with yoga in the open air.</p>
+            </div>
+            <div class="activity" style="animation-delay: 3s;">
+                <div class="slideshow" id="bonfire">
+                    <img src="bonfire1.jpg" class="active" alt="Bonfire Nights">
+                    <img src="bonfire2.jpg" alt="Bonfire Nights">
+                    <img src="bonfire3.jpg" alt="Bonfire Nights">
+                </div>
+                <h2>Bonfire Nights</h2>
+                <p>Gather around a cozy fire and enjoy the evening ambiance.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function startSlideshow(id) {
+            let slides = document.querySelectorAll(`#${id} img`);
+            let index = 0;
+            setInterval(() => {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }, 5000);
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            startSlideshow("swimming-pool");
+            startSlideshow("nature-trails");
+            startSlideshow("horseback-riding");
+            startSlideshow("spa-wellness");
+            startSlideshow("yoga");
+            startSlideshow("bonfire");
+        });
+    </script>
+</body>
+</html>

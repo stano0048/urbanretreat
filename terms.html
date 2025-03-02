@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions || Urban Ranch Retreat</title>
+    <link rel="icon" type="image/png" href="logo.webp">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".toggle-section h3");
+            sections.forEach(section => {
+                section.addEventListener("click", function () {
+                    const content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        document.querySelectorAll(".content").forEach(c => c.style.maxHeight = null);
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .toggle-section {
+            background: #eee;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .toggle-section:hover {
+            background: #ddd;
+        }
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"><img style="border-radius: 50%;" src="logo.webp" alt="Ranch Logo"></a>
+          </div>
+          <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="conferencing.html">Conferencing</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="leisure.html">Leisure</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#book" class="cta-button">Book Now</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <div class="container">
+        <h2>Terms and Conditions</h2>
+        
+        <div class="toggle-section">
+            <h3>1. Introduction</h3>
+            <div class="content">
+                <p>Welcome to Urban Ranch Retreat. These Terms and Conditions govern your use of our website and services.</p>
+            </div>
+        </div>
+        
+        <div class="toggle-section">
+            <h3>2. Booking and Payment</h3>
+            <div class="content">
+                <p>All bookings must be made in advance. Payments are accepted via M-Pesa, credit card, or bank transfer.</p>
+            </div>
+        </div>
+        
+        <div class="toggle-section">
+            <h3>3. Cancellation Policy</h3>
+            <div class="content">
+                <p>Cancellations must be made at least 48 hours before the check-in date to receive a full refund.</p>
+            </div>
+        </div>
+        
+        <div class="toggle-section">
+            <h3>4. Liability</h3>
+            <div class="content">
+                <p>Urban Ranch Retreat is not responsible for lost or stolen items. Guests must ensure their personal belongings are secure.</p>
+            </div>
+        </div>
+        
+        <div class="toggle-section">
+            <h3>5. Privacy Policy</h3>
+            <div class="content">
+                <p>We respect your privacy and will not share your personal information with third parties without consent.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

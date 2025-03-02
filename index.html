@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Ranch Retreat - Where City Meets Serenity</title>
+  <link rel="icon" type="image/png" href="logo.webp">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img style="border-radius: 50%;" src="logo.webp" alt="Ranch Logo"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="#conferencing">Conferencing</a></li>
+          <li><a href="#accommodation">Accommodation</a></li>
+          <li><a href="#leisure">Leisure</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#book" class="cta-button">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container" style="background-image: url('gallery1.jpg');">
+      <h1>Escape the City, Without Leaving It</h1>
+      <p style="background-color: grey;">Your perfect destination for conferences, relaxation, and unforgettable experiences.</p>
+      <div class="cta-buttons">
+        <a href="#book" class="cta-button">Book Your Stay</a>
+        <a href="#events" class="cta-button secondary">Plan Your Event</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="animate-on-scroll">
+    <div class="container">
+      <h2 style="color:#25D366;">Welcome to Urban Ranch Retreat</h2>
+      <p>Nestled in the heart of Nairobi City, Urban Ranch Retreat offers a unique blend of rustic charm and modern amenities. Whether you're hosting a corporate event, planning a getaway, or seeking adventure, we provide the perfect setting.</p>
+      <img src="about.jpg" alt="About Us Image" style="width: 600px; height: 300px;">
+    </div>
+  </section>
+
+  <!-- Conferencing Section -->
+  <section id="conferencing" class="animate-on-scroll">
+    <div class="container">
+      <h2 style="color:#25D366;">Host Unforgettable Events</h2>
+      <p>Our state-of-the-art conference facilities are designed to inspire productivity and creativity. From board meetings to large seminars, we have the space and technology to meet your needs.</p>
+      <ul>
+        <li>Fully equipped meeting rooms</li>
+        <li>High-speed Wi-Fi</li>
+        <li>Catering services</li>
+        <li>Outdoor event spaces</li>
+      </ul>
+      <a href="conferencing.html" class="cta-button">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Accommodation Section -->
+  <section id="accommodation" class="animate-on-scroll">
+    <div class="container">
+      <h2 style="color:#25D366;">Stay in Comfort and Style</h2>
+      <p>Choose from a range of accommodations, from cozy cabins to luxurious suites. Each space is designed to provide comfort and relaxation after a busy day.</p>
+      <ul>
+        <li>Private cabins</li>
+        <li>Family-friendly rooms</li>
+        <li>Modern amenities</li>
+        <li>Scenic views</li>
+      </ul>
+      <a href="accommodation.html" class="cta-button">Explore Accommodations</a>
+    </div>
+  </section>
+
+  <!-- Leisure Activities Section -->
+  <section id="leisure" class="animate-on-scroll">
+    <div class="container">
+      <h2 style="color:#25D366;">Experience Adventure and Relaxation</h2>
+      <p>Whether you're looking for adventure or relaxation, Urban Ranch Retreat has something for everyone. Enjoy horseback riding, hiking, spa treatments, and more.</p>
+      <ul>
+        <li>Horseback riding</li>
+        <li>Hiking trails</li>
+        <li>Spa and wellness center</li>
+        <li>Outdoor yoga</li>
+        <li>Bonfire nights</li>
+      </ul>
+      <a href="leisure.html" class="cta-button">Discover Activities</a>
+    </div>
+  </section>
+  <!-- Testimonials Section -->
+<section id="testimonials" class="animate-on-scroll">
+    <div class="container">
+      <h2 style="color:#25D366;">What Our Guests Say</h2>
+      <div class="testimonial-carousel">
+        <!-- Testimonial 1 -->
+        <div class="testimonial active">
+          <img src="testimonial1.jpg" alt="John">
+          <blockquote>
+            <p>"The perfect blend of nature and luxury. Our conference was a huge success, and our team loved the accommodations!"</p>
+            <cite>– John Doe</cite>
+          </blockquote>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial" class="animate-on-scroll">
+          <img src="testimonial2.jpg" alt="Guest 2">
+          <blockquote>
+            <p>"An unforgettable experience! The leisure activities were fantastic, and the staff was incredibly welcoming."</p>
+            <cite>– Jane Smith</cite>
+          </blockquote>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial" class="animate-on-scroll">
+          <img src="testimonial3.jpg" alt="Guest 3">
+          <blockquote>
+            <p>"The ranch is a hidden gem in the city. Perfect for both business and relaxation. Highly recommended!"</p>
+            <cite>– Michael Brown</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonial = 0;
+  
+    function showTestimonial(index) {
+      // Hide all testimonials
+      testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+      
+      // Show the selected testimonial
+      testimonials[index].classList.add('active');
+    }
+  
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }
+  
+    // Automatically switch testimonials every 5 seconds
+    setInterval(nextTestimonial, 5000);
+  
+    // Show the first testimonial on page load
+    showTestimonial(currentTestimonial);
+  </script>
+
+  <!-- Gallery Section -->
+<section id="gallery" class="animate-on-scroll">
+    <div class="container">
+      <h2 style="color:#25D366;">Explore Urban Ranch Retreat</h2>
+      <div class="gallery-carousel">
+        <!-- Gallery Image 1 -->
+        <div class="gallery-item active">
+            <h3>Swimming Pool</h3>
+          <img src="gallery1.jpg" alt="Swimming pool">
+        </div>
+        <!-- Gallery Image 2 -->
+        <div class="gallery-item">
+            <h3>Conferencing</h3>
+          <img src="gallery2.jpg" alt="Conference Hall">
+        </div>
+        <!-- Gallery Image 3 -->
+        <div class="gallery-item">
+            <h3>Accommodation</h3>
+          <img src="gallery3.webp" alt="Accommodation">
+        </div>
+        <!-- Gallery Image 4 -->
+        <div class="gallery-item">
+            <h3>Horseback Riding</h3>
+          <img src="gallery4.jpg" alt="Horseback riding">
+        </div>
+        <div class="gallery-item">
+            <h3>Bonfire Nights</h3>
+            <img src="gallery5.jpeg" alt="Bonfire nights">
+        </div>
+        <div class="gallery-item">
+            <h3>Our Restaurant</h3>
+            <img src="gallery6.webp" alt="Restaurant">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="animate-on-scroll">
+    <div class="container">
+      <h2 style="color:#25D366;">Get in Touch</h2>
+      <p>Have questions or ready to book? We’re here to help!</p>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+      <div id="success-message" style="display: none;">Thank you! Your message has been sent.</div>
+      <div class="contact-info">
+        <p><strong>Location:</strong> Karen <b>along Langata road</b>, 20KM from Nairobi City Center</p>
+        <p><strong>Phone:</strong> +254 722 772542</p>
+        <p><strong>Email:</strong> stanleymakanga45@gmail.com</p>
+        <a href="https://wa.me/254746640048" target="_blank" style="display: flex; align-items: center; text-decoration: none; background-color: #25D366; color: white; padding: 10px 15px; border-radius: 5px; width: fit-content;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" style="width: 24px; height: 24px; margin-right: 10px;">
+          <span>Chat with us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="animate-on-scroll">
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li><a href="#home" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Home</a></li>
+          <li><a href="#about" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">About Us</a></li>
+          <li><a href="#conferencing" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Conferencing</a></li>
+          <li><a href="#accommodation"style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Accommodation</a></li>
+          <li><a href="#leisure" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Leisure</a></li>
+          <li><a href="feedback.html" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Feedback & Reviews</a></li>
+          <li><a href="#contact" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Contact</a></li>
+          <li><a href="faq.html" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">FAQ</a></li>
+        </ul>
+      </div>
+      <h2 style="background-color: #25D366; display: inline-block; padding: 5px; margin: 0;">Follow Us</h2>
+      <div class="social-media">
+        <a href="https://www.facebook.com/its.stano" target="_blank" style="display: inline-block; transform: scale(1); box-shadow: none; border: 2px solid transparent; transition: all 0.3s;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px; fill: #1877F2; transition: fill 0.3s ease;" onmouseover="this.style.fill='white'" onmouseout="this.style.fill='#1877F2'">
+            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.414c0-2.507 1.492-3.89 3.777-3.89 1.096 0 2.238.195 2.238.195v2.464h-1.26c-1.243 0-1.63.776-1.63 1.57v1.888h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+        </svg>
+        </a>
+        <a href="https://instagram.com/7_stanley7" target="_blank">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px; fill: #E1306C; transition: fill 0.3s ease;" onmouseover="this.style.fill='white'" onmouseout="this.style.fill='#E1306C'">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.75-3a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0z"/>
+        </svg>
+        </a>
+        <a href="https://x.com/StanleyMakanga2" target="_blank" style="display: inline-block; transform: scale(1); box-shadow: none; border: 2px solid transparent; transition: all 0.3s;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px; fill: #000000; transition: fill 0.3s ease;" onmouseover="this.style.fill='white'" onmouseout="this.style.fill='#000000'">
+              <path d="M22.46 2.72h-2.8L14.4 9.66l-4.12-6.94H2.54L9.1 12 2.54 21.28h2.8l5.28-8.35 4.37 6.94h7.31L14.9 12l7.56-9.28z"/>
+          </svg>
+      </a>
+  
+      <a href="https://linkedin.com/in/stanley-makanga-974393349/" target="_blank" style="display: inline-block; transform: scale(1); box-shadow: none; border: 2px solid transparent; transition: all 0.3s;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px; fill: #0077B5; transition: fill 0.3s ease;" onmouseover="this.style.fill='white'" onmouseout="this.style.fill='#0077B5'">
+              <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.06 20.45H3.56V9h3.5v11.45zM5.31 7.5c-1.12 0-2.02-.9-2.02-2s.9-2 2.02-2c1.11 0 2.02.9 2.02 2s-.9 2-2.02 2zM20.45 20.45h-3.5v-5.64c0-1.35-.03-3.08-1.88-3.08-1.88 0-2.17 1.47-2.17 2.99v5.73h-3.5V9h3.36v1.57h.05c.47-.89 1.6-1.83 3.29-1.83 3.52 0 4.17 2.32 4.17 5.34v6.37z"/>
+          </svg>
+      </a>
+      </div>
+      <div class="newsletter">
+        <p>Subscribe to our newsletter for updates and offers.</p>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="legal">
+        <p>&copy; 2025 Urban Ranch Retreat. All rights reserved.</p>
+        <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let galleryItems = document.querySelectorAll('.gallery-item');
+    let currentGalleryItem = 0;
+  
+    function showGalleryItem(index) {
+      // Hide all gallery items
+      galleryItems.forEach(item => item.classList.remove('active'));
+      
+      // Show the selected gallery item
+      galleryItems[index].classList.add('active');
+    }
+  
+    function nextGalleryItem() {
+      currentGalleryItem = (currentGalleryItem + 1) % galleryItems.length;
+      showGalleryItem(currentGalleryItem);
+    }
+  
+    // Automatically switch gallery items every 6 seconds
+    setInterval(nextGalleryItem, 6000);
+  
+    // Show the first gallery item on page load
+    showGalleryItem(currentGalleryItem);
+  </script>
+  <script src="annimations.js"></script>
+</body>
+</html>

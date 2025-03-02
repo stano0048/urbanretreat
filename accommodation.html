@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation || Urban Ranch Retreat</title>
+    <link rel="icon" type="image/png" href="logo.webp">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .rooms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .room {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInScale 1s ease-in-out forwards;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        body {
+    background-image: url('background.jpg');
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+    </style>
+    <div class="cantainer">
+        <header class="fade-in">
+            <div class="container">
+              <div class="logo">
+                <a href="index.html"><img style="border-radius: 50%;" src="logo.webp" alt="Ranch Logo"></a>
+              </div>
+              <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="conferencing.html">Conferencing</a></li>
+                    <li><a href="accommodation.html">Accommodation</a></li>
+                    <li><a href="leisure.html">Leisure</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#book" class="cta-button">Book Now</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Accommodation</h1>
+        <p>Experience luxury and comfort at Urban Ranch Retreat. Choose from our premium selection of rooms and suites.</p>
+        <div class="rooms">
+            <div class="room" style="animation-delay: 0.5s;">
+                <div class="slideshow" id="luxury-suite">
+                    <img src="luxury1.png" class="active" alt="Luxury Suite">
+                    <img src="luxury2.jpg" alt="Luxury Suite">
+                    <img src="luxury3.jpg" alt="Luxury Suite">
+                </div>
+                <h2>Luxury Suite</h2>
+                <p>Spacious suite with premium amenities, perfect for a lavish stay.</p>
+            </div>
+            <div class="room" style="animation-delay: 1s;">
+                <div class="slideshow" id="deluxe-room">
+                    <img src="deluxe-room1.jpg" class="active" alt="Deluxe Room">
+                    <img src="deluxe-room2.jpg" alt="Deluxe Room">
+                    <img src="deluxe-room3.jpg" alt="Deluxe Room">
+                </div>
+                <h2>Deluxe Room</h2>
+                <p>Comfortable and stylish, ideal for solo travelers and couples.</p>
+            </div>
+            <div class="room" style="animation-delay: 1.5s;">
+                <div class="slideshow" id="family-suite">
+                    <img src="family-suite1.jpg" class="active" alt="Family Suite">
+                    <img src="family-suite2.jpg" alt="Family Suite">
+                    <img src="family-suite3.jpg" alt="Family Suite">
+                </div>
+                <h2>Family Suite</h2>
+                <p>Spacious accommodations for families and groups, ensuring a relaxing stay.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function startSlideshow(id) {
+            let slides = document.querySelectorAll(`#${id} img`);
+            let index = 0;
+            setInterval(() => {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }, 5000);
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            startSlideshow("luxury-suite");
+            startSlideshow("deluxe-room");
+            startSlideshow("family-suite");
+        });
+    </script>
+</body>
+</html>
