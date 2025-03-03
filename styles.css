@@ -28,7 +28,7 @@ body {
     background-color: #333;
   }
 
-.hero-section {
+.hero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .hero-section {
+    .hero {
         flex-direction: column;
         text-align: center;
         padding: 20px;
