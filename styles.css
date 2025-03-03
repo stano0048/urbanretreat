@@ -439,3 +439,21 @@ button[type="submit"]:hover {
     color: white;
     text-decoration: none;
   }
+.footer-links {
+    display: flex;
+    justify-content: center; /* Centers the links */
+    gap: 20px; /* Space between links */
+    padding: 10px 0;
+    list-style: none;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
