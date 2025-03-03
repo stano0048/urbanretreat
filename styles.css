@@ -75,6 +75,28 @@ body {
     font-size: 1.2rem;
     margin-bottom: 5px;
   }
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
   
   .cta-buttons {
     display: flex;
